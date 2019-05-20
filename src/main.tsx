@@ -2,7 +2,7 @@
 
 import app from 'apprun';
 
-import Layout from './layout';
+import Layout from './layout-bootstrap';
 import components from './components';
 
 app.render(document.body, <Layout />);
