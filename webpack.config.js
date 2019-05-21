@@ -1,5 +1,9 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const path = require('path');
-const public = 'docs';
+const public = 'public';
+
 module.exports = {
   entry: {
     'app': './src/main.tsx',
@@ -14,12 +18,17 @@ module.exports = {
   module: {
     rules: [
       { test: /.tsx?$/, loader: 'ts-loader' },
-      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" }
+      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" },
+      { test: /\.css$/, use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader'] },
     ]
   },
   devServer: {
     contentBase: path.join(__dirname, public),
     open: true,
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html'}),
+    new MiniCssExtractPlugin({ filename: 'style.css' })
+  ]
 }
