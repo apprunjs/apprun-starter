@@ -1,10 +1,10 @@
-import Page401 from './errors/401';
-import Page404 from './errors/404';
-import Page500 from './errors/500';
+import Page401 from './common/401';
+import Page404 from './common/404';
+import Page500 from './common/500';
 
 import Home from './pages/home';
-import Contact from './pages/contact';
 import About from './pages/about';
+import Contact from './pages/contact';
 
 export default [
   // error pages
@@ -14,7 +14,7 @@ export default [
 
   // add your pages here
   [Home, '#'],
-  [Contact, '#Contact'],
   [About, '#About'],
+  [Contact, '#Contact'],
 
 ] as (readonly [any, string])[];
