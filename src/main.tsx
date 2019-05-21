@@ -2,8 +2,8 @@
 
 import app from 'apprun';
 
-import Layout from './layout';
-import components from './components';
+import Layout from './views/layout';
+import components from './views';
 
 app.render(document.body, <Layout />);
 const element = document.getElementById('main');
