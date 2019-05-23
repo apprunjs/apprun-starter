@@ -6,7 +6,7 @@ const public = 'public';
 
 module.exports = {
   entry: {
-    'app': './src/main.tsx',
+    'app': './src/index.tsx',
   },
   output: {
     path: path.resolve(__dirname, public),

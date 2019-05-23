@@ -2,12 +2,13 @@ import './styles/index.css';
 
 import app from 'apprun';
 
-import Layout from './views/layout';
-import components from './views';
+import Layout from './layout';
+import pages from './pages';
+import site from './site';
 
-app.render(document.body, <Layout />);
+app.render(document.body, <Layout {...site}/>);
 const element = document.getElementById('main');
-components.forEach(def => {
+pages.forEach(def => {
   const [Comp, event] = def;
   const component = new Comp().mount(element);
   app.on(event, (...p) => component.run('.', ...p));
