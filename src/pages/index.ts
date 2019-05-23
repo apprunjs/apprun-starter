@@ -1,10 +1,10 @@
-import Page401 from './common/401';
-import Page404 from './common/404';
-import Page500 from './common/500';
+import Page401 from './401';
+import Page404 from './404';
+import Page500 from './500';
 
-import Home from './pages/home';
-import About from './pages/about';
-import Contact from './pages/contact';
+import Home from './home';
+import About from './about';
+import Contact from './contact';
 
 export default [
   // error pages
