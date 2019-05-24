@@ -8,6 +8,8 @@ export default {
   ],
 
   sidebar: [
-    { text: 'Home', link: '/#' }
+    { text: 'Home', link: '/#' },
+    { text: 'Contact', link: '/#Contact' },
+    { text: 'About', link: '/#About' },
   ]
 };
