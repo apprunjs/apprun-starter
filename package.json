@@ -7,13 +7,12 @@
     "test": "jest --watch",
     "start": "webpack-dev-server --mode development",
     "build": "webpack -p --mode production",
-    "install": "npm install -D apprun source-map-loader ts-loader typescript webpack webpack-cli webpack-dev-server"
+    "build:pages": "apprun-site build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "apprun": "^2.19.2",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
@@ -21,11 +20,14 @@
     "style-loader": "^0.23.1",
     "ts-loader": "^6.0.1",
     "typescript": "^3.4.5",
-    "webpack": "^4.32.0",
+    "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "apprun": "^2.20.1",
+    "apprun-site": "../apprun-site"
+  },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

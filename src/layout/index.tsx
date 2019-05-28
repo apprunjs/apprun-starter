@@ -1,8 +1,8 @@
 import app from 'apprun';
 
-export default ({ name, nav, sidebar }) => <>
+export default ({ title, element, nav, sidebar }) => <>
   <header>
-    <h1>{name}</h1>
+    <h1>{title}</h1>
     <ul>
       {nav.map(item => <li><a href={item.link}>{item.text}</a></li>)}
     </ul>
@@ -13,7 +13,7 @@ export default ({ name, nav, sidebar }) => <>
     </ul>
   </nav>
   <main>
-    <div id='main'></div>
+    <div id={element}></div>
   </main>
   {/* <aside></aside> */}
   <footer>Footer</footer>
