@@ -1,15 +1,17 @@
 import './styles/index.css';
 
-import app from 'apprun';
+import app from 'apprun-site';
+import layout from './layout';
+import pages from './pages/_index';
 
-import Layout from './layout';
-import pages from './pages';
-import site from './site';
+import * as config from './config.json';
+const site = {
+  title: config.title,
+  element: config.element,
+  nav: config.nav,
+  sidebar: config.sidebar,
+  layout,
+  pages,
+};
 
-app.render(document.body, <Layout {...site}/>);
-const element = document.getElementById('main');
-pages.forEach(def => {
-  const [Comp, event] = def;
-  const component = new Comp().mount(element);
-  app.on(event, (...p) => component.run('.', ...p));
-});
+app.start(site);

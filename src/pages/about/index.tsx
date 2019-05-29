@@ -9,9 +9,4 @@ export default class extends Component {
       {state}
     </div>
   }
-
-  update = [
-    ['.', state => state]
-  ]
-
 }
