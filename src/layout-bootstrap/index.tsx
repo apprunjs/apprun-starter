@@ -7,7 +7,7 @@ app.on('//', route => {
   item && item.parentElement.classList.add('active');
 })
 
-export default ({ title, element, nav,  }) => <div class="container">
+export default ({ title, element, nav }) => <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">{title}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"

@@ -1,15 +1,17 @@
 // this file is auto-generated
-import _404_0 from './_404/index';
-import about_1 from './/about/index';
-import contact_2 from './/contact/index';
-import home_3 from './/home/index';
+import index_0 from './_404/index';
+import index_1 from './about/index';
+import index_2 from './contact/index';
+import index_3 from './index';
 export default [
-	["/about", about_1],
-	["/contact", contact_2],
-	["/home", home_3],
+	["/_404", index_0],
+	["/about", index_1],
+	["/contact", index_2],
+	["/", index_3],
 ] as (readonly [string, any])[];
 export const links = [
-	{"link": "/about", "text": "about"},
-	{"link": "/contact", "text": "contact"},
-	{"link": "/home", "text": "home"},
+	{"link": "/_404", "text": "/_404"},
+	{"link": "/about", "text": "/about"},
+	{"link": "/contact", "text": "/contact"},
+	{"link": "/", "text": "/"},
 ]

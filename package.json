@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "apprun": "^2.20.1",
-    "apprun-site": "../apprun-site"
+    "apprun-site": "^0.2.0"
   },
   "jest": {
     "transform": {
