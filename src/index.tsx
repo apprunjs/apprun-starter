@@ -1,5 +1,6 @@
-import app from 'apprun-site';
+import './styles/index.css';
 
+import app from 'apprun-site';
 import layout from './layout';
 import pages from './pages/_index';
 
