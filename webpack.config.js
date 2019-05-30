@@ -31,7 +31,7 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html'}),
+    new HtmlWebpackPlugin({ template: 'src/layout/index.html'}),
     new MiniCssExtractPlugin({ filename: 'style.css' })
   ]
 }

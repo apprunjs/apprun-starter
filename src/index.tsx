@@ -1,4 +1,4 @@
-import './styles/index.css';
+import './layout/index.css';
 
 import app from 'apprun-site';
 import layout from './layout';

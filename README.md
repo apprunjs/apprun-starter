@@ -6,6 +6,23 @@ Use degit to download.
 
 * npx degit apprunjs/apprun-starter [my-apprun-app]
 
+There are three layouts included.
+
+* Default
+* Bootstrap
+* CoreUI
+
+You can rename the layout folder to choose layout. To use the bootstrap layout
+
+* rename layout to layout-default
+* rename layout-bootstrap to bootstrap
+
+
+To use the coreUI layout
+
+* rename layout to layout-default
+* rename layout-coreui to bootstrap
+
 Use npm commands
 
 * Use _npm install_ to install apprun, typescript and webpack
