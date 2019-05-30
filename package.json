@@ -5,9 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --watch",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack -p --mode production",
-    "build:pages": "apprun-site build"
+    "start": "run-p start:*",
+    "start:dev": "webpack-dev-server --mode development",
+    "build": "run-s build:*",
+    "build:pages": "apprun-site build -V",
+    "build:ts": "webpack -p --mode production",
+    "start:pages": "apprun-site build -w -V"
   },
   "keywords": [],
   "author": "",
@@ -16,17 +19,18 @@
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
+    "npm-run-all": "^4.1.5",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "ts-loader": "^6.0.1",
-    "typescript": "^3.4.5",
+    "typescript": "^3.5.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "apprun": "^2.20.3",
-    "apprun-site": "^0.2.1"
+    "apprun": "^2.20.4",
+    "apprun-site": "^0.3.1"
   },
   "jest": {
     "transform": {

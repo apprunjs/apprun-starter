@@ -2,7 +2,7 @@ import './layout/index.css';
 
 import app from 'apprun-site';
 import layout from './layout';
-import pages from './pages/_index';
+import pages from './_lib/index';
 
 import * as config from './config.json';
 const site = {
