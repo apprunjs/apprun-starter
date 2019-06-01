@@ -6,3 +6,4 @@ coverage
 .cache
 docs
 public
+src/_lib
