@@ -6,11 +6,14 @@
   "scripts": {
     "test": "jest --watch",
     "start": "run-p start:*",
-    "start:dev": "webpack-dev-server --mode development",
+    "start:dev": "sirv public -s -D",
     "start:pages": "apprun-site build -w -V",
     "build": "run-s build:*",
     "build:pages": "apprun-site build",
-    "build:js": "webpack -p --mode production"
+    "build:js": "webpack -p --mode production",
+    "build:esm": "run-s build:esm:*",
+    "build:esm:ts": "tsc -p src",
+    "build:esm:fix": "apprun-site fix-esm --source public/esm"
   },
   "keywords": [],
   "author": "",
@@ -18,10 +21,11 @@
   "devDependencies": {
     "css-loader": "^2.1.1",
     "extract-loader": "^3.1.0",
-    "file-loader": "^3.0.1",
+    "file-loader": "^4.0.0",
     "glob": "^7.1.4",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
+    "sirv-cli": "^0.4.3",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.0.2",
     "typescript": "^3.5.1",
@@ -30,7 +34,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "apprun": "^2.20.4",
+    "apprun": "^2.20.6",
     "apprun-site": "^0.5.0",
     "material-components-web": "^2.3.0"
   },

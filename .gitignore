@@ -4,6 +4,9 @@ Thumbs.db
 node_modules
 coverage
 .cache
-docs
-public
+
+!public/
+public/*
+!public/esm
+
 src/_lib
