@@ -1,10 +1,16 @@
-## AppRun Starter
+# AppRun Starter
 
-> This is an [AppRun](https://github.com/yysun/apprun) application starter template.
+This is an built with [AppRun](https://github.com/yysun/apprun) and [AppRun Site](https://github.com/yysun/apprun-site) framework library.
+
+## Quick Start
 
 Use degit to download.
 
-* npx degit apprunjs/apprun-starter [my-apprun-app]
+```sh
+npx degit apprunjs/apprun-starter [my-apprun-app]
+```
+
+## Switch Layouts
 
 There are three layouts included.
 
@@ -14,14 +20,18 @@ There are three layouts included.
 
 You can rename the layout folder to choose layout. To use the bootstrap layout
 
-* rename layout to layout-default
-* rename layout-bootstrap to bootstrap
-
+* rename _layout_ to _layout-default_
+* copy **index.html** from _layout-bootstrap_ to _public_
+* rename _layout-bootstrap_ to _layout_
 
 To use the coreUI layout
 
-* rename layout to layout-default
-* rename layout-coreui to bootstrap
+* rename _layout_ to _layout-default_
+* copy **index.html** from _layout-coreui_ to _public_
+
+* rename _layout-coreui_ to _layout_
+
+## Run the Application
 
 Use npm commands
 
