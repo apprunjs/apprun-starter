@@ -18,6 +18,10 @@ There are three layouts included.
 * Bootstrap
 * CoreUI
 
+![](p1.png)
+![](p2.png)
+![](p3.png)
+
 You can rename the layout folder to choose layout. To use the bootstrap layout
 
 * rename _layout_ to _layout-default_
