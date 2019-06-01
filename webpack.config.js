@@ -1,6 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const path = require('path');
 const public = 'public';
 
@@ -18,8 +15,7 @@ module.exports = {
   module: {
     rules: [
       { test: /.tsx?$/, loader: 'ts-loader' },
-      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" },
-      { test: /\.css$/, use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader'] },
+      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" }
     ]
   },
   devServer: {
@@ -29,9 +25,5 @@ module.exports = {
       index: 'index.html'
     }
   },
-  devtool: 'source-map',
-  plugins: [
-    new HtmlWebpackPlugin({ template: 'src/layout/index.html'}),
-    new MiniCssExtractPlugin({ filename: 'style.css' })
-  ]
+  devtool: 'source-map'
 }

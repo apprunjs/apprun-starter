@@ -1,6 +1,6 @@
-import app from 'apprun-site/dist'; // <== !IMPORTANT!
+import app from 'apprun-site';
 import layout from './layout/index';
-import pages, {links} from './_lib/index';
+import pages, {links} from './_lib/index-esm';
 
 const site = {
   title: 'My App',
@@ -10,4 +10,5 @@ const site = {
   layout,
   pages,
 };
-app.start(site);
+
+app(site);
