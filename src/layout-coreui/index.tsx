@@ -6,12 +6,12 @@ import Aside from './aside';
 import Footer from './footer';
 import Breadcrumb from './breadcrumb';
 
-export default ({ title, element, nav }) => <>
+export default ({ element, title, sidebar, nav }) => <>
   <Header />
   <div class="app-body">
     <div class="sidebar">
       <nav class="sidebar-nav ps ps--active-y">
-        <Sidebar />
+        <Sidebar sidebar={sidebar}/>
         <div class="ps__rail-x">
           <div class="ps__thumb-x" tabindex="0"></div>
         </div>
@@ -23,7 +23,10 @@ export default ({ title, element, nav }) => <>
     </div>
     <main class="main">
       <Breadcrumb />
-      <div class="container-fluid" id={element}>
+      <div class="container-fluid" >
+        <div class="card">
+          <div className="card-body" id={element}></div>
+        </div>
       </div>
     </main>
     <aside class="aside-menu">
