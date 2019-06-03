@@ -12,28 +12,41 @@ npx degit apprunjs/apprun-starter [my-apprun-app]
 
 ## Switch Layouts
 
-There are three layouts included.
+There are four layouts included.
 
 * Default
 * Bootstrap
 * CoreUI
+* Material Design
 
 ![](p1.png)
 ![](p2.png)
 ![](p3.png)
+![](p4.png)
 
-You can rename the layout folder to choose layout. To use the bootstrap layout
+You can rename the layout folder to choose layout.
+
+### To use the bootstrap layout
 
 * rename _layout_ to _layout-default_
 * copy **index.html** from _layout-bootstrap_ to _public_
 * rename _layout-bootstrap_ to _layout_
 
-To use the coreUI layout
+### To use the coreUI layout
 
 * rename _layout_ to _layout-default_
 * copy **index.html** from _layout-coreui_ to _public_
 
 * rename _layout-coreui_ to _layout_
+
+
+### To use the material layout
+
+* rename _layout_ to _layout-default_
+* copy **index.html** and **style.css** from _layout-material_ to _public_
+
+* rename _layout-material_ to _layout_
+
 
 ## Run the Application
 
