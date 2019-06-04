@@ -1,6 +1,6 @@
 import app from 'apprun-site/dist'; // <== !IMPORTANT!
 import layout from './layout/index';
-import pages, {links} from './_lib/index';
+import pages from './_lib/index';
 
 const site = {
   title: 'My AppRun Site',
@@ -10,8 +10,13 @@ const site = {
     { "text": "Contact", "link": "/contact" },
     { "text": "About", "link": "/about" }
   ],
-  sidebar: links,
+  sidebar: [
+    { "text": "Home", "link": "/" },
+    { "text": "Contact", "link": "/contact" },
+    { "text": "About", "link": "/about" }
+  ],
   layout,
   pages,
+  eventRoot: '/'
 };
 app.start(site);
