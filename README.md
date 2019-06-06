@@ -1,6 +1,6 @@
 # AppRun Starter
 
-This is an built with [AppRun](https://github.com/yysun/apprun) and [AppRun Site](https://github.com/yysun/apprun-site) framework library.
+This is an application built iwth [AppRun Site](https://github.com/yysun/apprun-site), an framework for building [AppRun](https://github.com/yysun/apprun) applications.
 
 ## Quick Start
 

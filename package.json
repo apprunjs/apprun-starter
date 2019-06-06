@@ -12,9 +12,21 @@
     "build:pages": "apprun-site build",
     "build:js": "webpack -p --mode production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "AppRUn",
+    "AppRun Site",
+    "Template"
+  ],
+  "author": "Yiyi Sun <yiyisun@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apprunjs/apprun-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apprunjs/apprun-starter/issues"
+  },
+  "homepage": "https://github.com/apprunjs/apprun-starter#readme",
   "devDependencies": {
     "css-loader": "^2.1.1",
     "extract-loader": "^3.1.0",
@@ -30,8 +42,8 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "apprun": "^2.20.4",
-    "apprun-site": "^0.5.0",
+    "apprun": "^2.20.6",
+    "apprun-site": "^0.5.2",
     "material-components-web": "^2.3.0"
   },
   "jest": {
