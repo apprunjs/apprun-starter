@@ -1,6 +1,6 @@
 //This is the service worker with the Advanced caching
 
-const CACHE = "pwabuilder-adv-cache";
+const CACHE = "my-apprun-site";
 const precacheFiles = [
   "index.html",
   "app.js",

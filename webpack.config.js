@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const public = 'public';
 
@@ -5,7 +6,8 @@ module.exports = {
   entry: ['./src/layout/style.scss', './src/index.tsx'],
   output: {
     path: path.resolve(__dirname, public),
-    filename: 'app.js'
+    filename: 'app.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
@@ -24,7 +26,7 @@ module.exports = {
           { loader: 'extract-loader' },
           { loader: 'css-loader' },
           {
-            loader: path.resolve('fast-sass-loader.js'),
+            loader: path.resolve(__dirname, 'loader/fast-sass-loader.js'),
             options: {
               includePaths: ['./node_modules']
             }
@@ -40,5 +42,8 @@ module.exports = {
       index: 'index.html'
     }
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    new HtmlWebpackPlugin({ template: 'src/layout/index.html'})
+  ]
 }
