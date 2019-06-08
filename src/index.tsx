@@ -1,7 +1,7 @@
-import app from 'apprun-site/dist'; // <== !IMPORTANT!
+import app from 'apprun-site';
 
-import layout from './layout/index';
-import pages from './_lib/index';
+import layout from './layout';
+import pages from './_lib';
 
 import './components/counter';
 import './components/my-xkcd';

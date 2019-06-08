@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "apprun": "^2.20.6",
-    "apprun-site": "^0.5.2",
+    "apprun-site": "^0.5.4",
     "material-components-web": "^2.3.0"
   },
   "jest": {
