@@ -4,15 +4,25 @@
 
 This is an application built using [AppRun Site](https://github.com/yysun/apprun-site), an framework for building [AppRun](https://github.com/yysun/apprun) applications.
 
-* It is a Single Page App (SPA) that has a layout and three sample pages: home, contact and about.
+## Features
 
-* It is also a Progress Web App (WPA) that includes a service worker to improve the performance and make it work offline.
+* Progressive Web App (PWA) - support offline
+* Single Page App (SPA) - routing using / or #
+* 4 built-in layouts and bring your own
+* Compile html, markdown pages to AppRun components
+* Auto generate the index of pages
+* Build app logic using AppRun/Web components
+* Targets ES5 or ES Module
+
+
+## Project Structure
 
 This app has the following structure.
 
 ```
 public/
 src/
+  components/
   layout/
   layout-bootstrap/
   layout-coreui/
@@ -44,10 +54,10 @@ The **public** directory contains the files you can deploy to your hosting serve
 
 There are four layouts included under the **src/** directory for you to try out.
 
-* Default
-* Bootstrap
-* CoreUI
-* Material Design
+* Default - best for documentation site
+* Bootstrap - start point of bootstrap
+* CoreUI - best for admin UI / business apps
+* Material Design - best for mobile web app
 
 ### Switch Layouts
 
@@ -104,7 +114,7 @@ const precacheFiles = [
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
+const offlineFallbackPage = "offline.html";
 
 const networkFirstPaths = [
   /* Add an array of regex of paths that should go network first */
@@ -119,6 +129,9 @@ const avoidCachingPaths = [
 
 ```
 
+## Ready for More Information
+
+Please visit [AppRun Site Documentation](https://yysun.github.io/apprun-site/).
 
 
 Happy Coding.
