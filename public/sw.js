@@ -13,13 +13,14 @@ const offlineFallbackPage = "offline.html";
 const networkFirstPaths = [
   /* Add an array of regex of paths that should go network first */
   // Example: /\/api\/.*/
+  /\/xkcd-imgs\/*/,
+  /\/comics\/*/
 ];
 
 const avoidCachingPaths = [
   /* Add an array of regex of paths that shouldn't be cached */
   // Example: /\/api\/.*/
-  /\/sockjs-node\/*/,
-  /\/comics\/*/
+  /\/sockjs-node\/*/
 ];
 
 function pathComparer(requestUrl, pathRegEx) {
@@ -35,20 +36,17 @@ function comparePaths(requestUrl, pathsArray) {
       }
     }
   }
-
   return false;
 }
 
 self.addEventListener("install", function (event) {
   console.log("[PWA Builder] Install Event processing");
-
   console.log("[PWA Builder] Skip waiting on install");
   self.skipWaiting();
 
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
       console.log("[PWA Builder] Caching pages during install");
-
       return cache.addAll(precacheFiles).then(function () {
         return cache.add(offlineFallbackPage);
       });
@@ -65,7 +63,6 @@ self.addEventListener("activate", function (event) {
 // If any fetch fails, it will look for the request in the cache and serve it from there first
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
-
   if (comparePaths(event.request.url, networkFirstPaths)) {
     networkFirstFetch(event);
   } else {
@@ -86,7 +83,6 @@ function cacheFirstFetch(event) {
             return updateCache(event.request, response);
           })
         );
-
         return response;
       },
       function () {
@@ -95,7 +91,6 @@ function cacheFirstFetch(event) {
           .then(function (response) {
             // If request was success, add or update it in the cache
             event.waitUntil(updateCache(event.request, response.clone()));
-
             return response;
           })
           .catch(function (error) {
@@ -103,7 +98,6 @@ function cacheFirstFetch(event) {
             if (event.request.destination !== "document" || event.request.mode !== "navigate") {
               return;
             }
-
             console.log("[PWA Builder] Network request failed and no cache." + error);
             // Use the precached offline page as fallback
             return caches.open(CACHE).then(function (cache) {
@@ -139,7 +133,6 @@ function fromCache(request) {
       if (!matching || matching.status === 404) {
         return Promise.reject("no-match");
       }
-
       return matching;
     });
   });
@@ -151,6 +144,5 @@ function updateCache(request, response) {
       return cache.put(request, response);
     });
   }
-
   return Promise.resolve();
 }
