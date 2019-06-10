@@ -87,7 +87,7 @@ There are sample pages:
 > Try to edit the sample pages. And add or delete some pages. If you have started the app using _npm start_, you changes should be displayed in the browser automatically.
 
 
-## WPA
+## PWA
 
 This application includes a service worker from [PWA Builder](https://www.pwabuilder.com/).
 
