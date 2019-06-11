@@ -2,8 +2,6 @@
 import app, { Component } from 'apprun';
 declare var mdc;
 
-//style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;"
-
 export default class extends Component {
 
   view = ({ title, element, sidebar, nav }) => <div id="root">
@@ -52,18 +50,24 @@ export default class extends Component {
     </div>
   </div>
 
+  topAppBar;
+  drawer;
+
   rendered = () => {
     const drawerEl = document.querySelector('.mdc-drawer');
-    const drawer = new mdc.drawer.MDCDrawer.attachTo(drawerEl);
-
-    // Instantiate MDC Top App Bar (required)
     const topAppBarEl = document.querySelector('.mdc-top-app-bar');
-    const topAppBar = new mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarEl);
+    this.drawer = new mdc.drawer.MDCDrawer.attachTo(drawerEl);
+    this.topAppBar = new mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarEl);
 
-    topAppBar.setScrollTarget(document.querySelector('.drawer-main-content'));
-    topAppBar.listen('MDCTopAppBar:nav', () => {
-      drawer.open = !drawer.open;
+    this.topAppBar.setScrollTarget(document.querySelector('.drawer-main-content'));
+    this.topAppBar.listen('MDCTopAppBar:nav', () => {
+      this.drawer.open = !this.drawer.open;
     })
+  }
+
+  unload = () => {
+    this.topAppBar.destroy();
+    this.drawer.destroy();
   }
 }
 
