@@ -6,15 +6,11 @@
   "scripts": {
     "test": "jest --watch",
     "start": "run-p start:*",
-    "start:dev": "webpack-dev-server --mode development",
     "start:pages": "apprun-site build -w -V",
+    "start:dev": "webpack-dev-server --mode development",
     "build": "run-s build:*",
     "build:pages": "apprun-site build",
-    "build:js": "webpack -p --mode production",
-    "build-esm": "run-s build-esm:*",
-    "build-esm:ts": "tsc -p src",
-    "build-esm:fix": "apprun-site fix-esm --source public/esm -V",
-    "start-esm": "sirv public -s -D"
+    "build:js": "webpack -p --mode production"
   },
   "keywords": [
     "AppRUn",
@@ -32,24 +28,23 @@
   },
   "homepage": "https://github.com/apprunjs/apprun-starter#readme",
   "devDependencies": {
+    "apprun-site": "^0.7.0",
     "css-loader": "^3.4.2",
-    "extract-loader": "^4.0.3",
-    "file-loader": "^5.1.0",
+    "extract-loader": "^5.0.1",
+    "file-loader": "^6.0.0",
     "glob": "^7.1.6",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.0.2",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
-    "sirv-cli": "^0.4.5",
     "source-map-loader": "^0.2.4",
-    "ts-loader": "^6.2.1",
+    "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "apprun": "^2.23.1",
-    "apprun-site": "^0.7.0",
+    "apprun": "^2.23.7",
     "material-components-web": "^5.1.0"
   },
   "jest": {

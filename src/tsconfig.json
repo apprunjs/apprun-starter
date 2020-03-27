@@ -8,6 +8,5 @@
     "lib": ["dom", "es2015", "es5"],
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "outDir": "../public/esm"
   }
 }
