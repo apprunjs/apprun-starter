@@ -5,7 +5,7 @@
 
 const glob = require('glob');
 const path = require('path');
-const sass = require('node-sass');
+const sass = require('sass');
 const { promisify } = require('util');
 
 module.exports = async function () {

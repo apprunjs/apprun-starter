@@ -65,9 +65,7 @@ There are four layouts included under the **src/** directory for you to try out.
 You can rename the layout directory to switch the layouts.
 
 * To use the bootstrap layout, rename _layout-bootstrap_ to _layout_
-
 * To use the coreUI layout, rename _layout-coreui_ to _layout_
-
 * To use the material layout, rename _layout-material_ to _layout_
 
 ### Use Your Own Layout
