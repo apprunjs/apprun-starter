@@ -1,12 +1,16 @@
-import app from './_site';
+import app from 'apprun';
+import site from './_site';
 
 import layout from './layout';
 import pages from './_lib';
 
+// import web components
 import './components/counter';
 import './components/my-xkcd';
 
-const site = {
+app.on('/', () => app.run('/README'));
+
+const config = {
   title: 'My AppRun Site',
   element: 'main',
   nav: [
@@ -24,4 +28,5 @@ const site = {
   eventRoot: '/'
 };
 
-app.start(site);
+
+site.start(config);
