@@ -1,4 +1,4 @@
-import app from 'apprun-site';
+import app from './_site';
 
 import layout from './layout';
 import pages from './_lib';
