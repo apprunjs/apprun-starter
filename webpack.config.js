@@ -26,11 +26,18 @@ module.exports = {
           { loader: 'extract-loader' },
           { loader: 'css-loader' },
           {
-            loader: path.resolve(__dirname, 'loader/fast-sass-loader.js'),
+            loader: 'sass-loader',
             options: {
-              includePaths: ['./node_modules']
+              sassOptions: {
+                includePaths: ['./node_modules']
+              },
+              // Prefer Dart Sass
+              implementation: require('sass'),
+
+              // See https://github.com/webpack-contrib/sass-loader/issues/804
+              webpackImporter: false,
             }
-          }
+          },
         ]
       },
     ]
