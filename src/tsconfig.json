@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "es2015",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "reactNamespace": "app",
+    "jsxFactory": "app.h",
+    "jsxFragmentFactory": "app.Fragment",
     "lib": ["dom", "es2015", "es5"],
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   }
 }

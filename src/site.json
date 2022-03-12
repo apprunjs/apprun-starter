@@ -1,0 +1,47 @@
+{
+  "title": "My AppRun Site",
+  "layout": "bootstrap5/layout",
+  "element": "my-app",
+  "nav": [
+    {
+      "text": "Home",
+      "link": "#"
+    },
+    {
+      "text": "Contact",
+      "link": "#Contact"
+    },
+    {
+      "text": "About",
+      "link": "#About"
+    }
+  ],
+  "sidebar": [
+    {
+      "text": "Home",
+      "link": "#"
+    },
+    {
+      "text": "Contact",
+      "link": "#Contact"
+    },
+    {
+      "text": "About",
+      "link": "#About"
+    }
+  ],
+  "routes": [
+    {
+      "path": "#",
+      "component": "Home"
+    },
+    {
+      "path": "#Contact",
+      "component": "Contact"
+    },
+    {
+      "path": "#About",
+      "component": "About"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { app, Component } from 'apprun';
+import { app, Component } from '../apprun';
 
 export default class extends Component {
 

@@ -1,4 +1,4 @@
-import { app, Component } from 'apprun';
+import { app, Component } from '../apprun';
 
 export default class extends Component {
   state = 'My App';
@@ -14,9 +14,9 @@ export default class extends Component {
       <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="nav navbar-nav d-md-down-none">
-      <li class="nav-item px-3"><a class="nav-link" href="/">Home</a></li>
-      <li class="nav-item px-3"><a class="nav-link" href="/contact">Contact</a></li>
-      <li class="nav-item px-3"><a class="nav-link" href="/about">About</a></li>
+      <li class="nav-item px-3"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item px-3"><a class="nav-link" href="#Contact">Contact</a></li>
+      <li class="nav-item px-3"><a class="nav-link" href="#About">About</a></li>
     </ul>
     <ul class="nav navbar-nav ml-auto"></ul>
     <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
@@ -26,8 +26,4 @@ export default class extends Component {
       <span class="navbar-toggler-icon"></span>
     </button>
   </header>
-
-  update = [
-    ['.', state => state]
-  ]
 }
