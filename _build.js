@@ -2,13 +2,16 @@
 const builder = require('esbuild');
 const server = require('apprun-dev-server');
 
+const entryPoints = ['src/main.tsx',
+  'src/coreui/layout.tsx',
+  'src/bootstrap4/layout.tsx',
+  'src/bootstrap5/layout.tsx',
+  'src/material/layout.tsx',
+  'src/tailwind/layout.tsx',
+  'src/Home.tsx', 'src/About.tsx', 'src/Contact.tsx'];
+
 const build = (watch = false) => builder.build({
-  entryPoints: ['src/main.tsx',
-    'src/coreui/layout.tsx',
-    'src/bootstrap4/layout.tsx',
-    'src/bootstrap5/layout.tsx',
-    'src/material/layout.tsx',
-    'src/Home.tsx', 'src/About.tsx', 'src/Contact.tsx'],
+  entryPoints,
   outdir: 'public/dist',
   format: 'esm',
   bundle: true,

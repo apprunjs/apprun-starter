@@ -1,6 +1,6 @@
 {
   "title": "My AppRun Site",
-  "layout": "bootstrap5/layout",
+  "layout": "tailwind/layout",
   "element": "my-app",
   "nav": [
     {

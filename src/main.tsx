@@ -33,16 +33,16 @@ app['add_js'] = (url, type = null) => new Promise((resolve, reject) => {
 const { layout, routes, element } = site_meta;
 
 
-app['add-route'] = (path, component) => {
+app['add_component'] = (path, component) => {
   app.once(path, async () => {
     const module = await import(`./${component}.js`);
     new module.default().mount(element);
   });
 };
 
-routes.forEach(({ path, component }) => app['add-route'] (path, component));
+routes.forEach(({ path, component }) => app['add_component'] (path, component));
 
-app['set-layout'] = async (layout) => {
+app['render_layout'] = async (layout) => {
   import(`./${layout}.js`).then(async module => {
     const { Layout, styles, scripts, body_class } = module.default || {};
     if (styles) for (let i = 0; i < styles.length; i++) await app['add_css'](styles[i]);
@@ -53,4 +53,4 @@ app['set-layout'] = async (layout) => {
   });
 };
 
-app['set-layout'](window['layout'] || layout);
+app['render_layout'](window['layout'] || layout);
