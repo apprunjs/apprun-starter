@@ -1,7 +1,7 @@
 import { app, Component } from '../apprun';
 declare var mdc;
 
-const { title, element, sidebar, nav } = window['site_meta'];
+import { main_id, title, sidebar, components } from '../site.json';
 
 let topAppBar;
 let drawer;
@@ -12,7 +12,7 @@ class Layout extends Component {
     <div class="drawer-frame-root">
       <aside class="mdc-drawer mdc-drawer--modal" $mdc-drawer>
         <div class="mdc-drawer__header">
-          <h3 class="mdc-drawer__title">{ title }</h3>
+          <h3 class="mdc-drawer__title">{title}</h3>
           {/* <h6 class="mdc-drawer__subtitle">email@material.io</h6> */}
         </div>
         <div class="mdc-drawer__content">
@@ -40,7 +40,7 @@ class Layout extends Component {
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
 
-                {/* {nav.map(item => <button onclick={e => app.run(item.link, e)}
+              {/* {nav.map(item => <button onclick={e => app.run(item.link, e)}
                     class="mdc-top-app-bar__action-item"
                   aria-label={item.text}>{item.text}</button>)} */}
 
@@ -52,7 +52,7 @@ class Layout extends Component {
         </header>
         <div class="drawer-main-content" tabindex="0">
           <div class="mdc-top-app-bar--fixed-adjust"></div>
-          <div id={element}></div>
+          <div id={main_id}></div>
         </div>
       </div>
     </div>
@@ -74,6 +74,7 @@ export default {
     'https://unpkg.com/material-components-web@6/dist/material-components-web.min.js',
   ],
   body_class: ['mdc-typography'],
+  components,
   Layout
 }
 

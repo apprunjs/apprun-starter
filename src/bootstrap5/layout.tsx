@@ -1,5 +1,6 @@
 
 import app from '../apprun';
+import { main_id, title, nav, components } from '../site.json';
 
 app.on('//', (route) => {
   let menus = document.querySelectorAll('.nav-link');
@@ -7,8 +8,6 @@ app.on('//', (route) => {
   menus = document.querySelectorAll(`[href='${route}']`);
   for (let i = 0; i < menus.length; ++i) { menus[i].classList.add('active'); }
 });
-
-const { element, title, sidebar, nav } = window['site_meta'];
 
 const css = `
 sidebar {
@@ -113,10 +112,9 @@ const Layout = () => <>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {nav && nav.map(({ text, link, icon }) =>
+              {nav && nav.map(({ text, link }) =>
                 <li class="nav-item">
                   <a class="nav-link" href={link}>
-                    {icon ? <i class={`nav-icon icon-${icon}`}></i> : ''}
                     {text}
                   </a>
                 </li>
@@ -129,7 +127,7 @@ const Layout = () => <>
           </div>
         </div>
       </nav>
-      <div class="container-fluid p-4 pt-3" id={element}>
+      <div class="container-fluid p-4 pt-3" id={main_id}>
       </div>
     </main>
   </div>
@@ -144,5 +142,6 @@ export default {
     'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js',
   ],
+  components,
   Layout
 }

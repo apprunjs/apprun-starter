@@ -1,5 +1,6 @@
 
 import app from '../apprun';
+import { main_id, title, nav, components } from '../site.json';
 
 app.on('//', (route) => {
   const menus = document.querySelectorAll('.navbar-nav li');
@@ -10,7 +11,7 @@ app.on('//', (route) => {
 
 const Layout = () => <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Project Name</a>
+    <a class="navbar-brand" href="#">{ title }</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +32,7 @@ const Layout = () => <div class="container">
       </ul>
     </div>
   </nav>
-  <div class="container" id="my-app"></div>
+  <div class="container" id={main_id}></div>
 </div>;
 
 export default {
@@ -43,5 +44,6 @@ export default {
     'https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js',
     'https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js',
   ],
+  components,
   Layout
 }

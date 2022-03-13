@@ -6,7 +6,7 @@ import Aside from './aside';
 import Footer from './footer';
 import Breadcrumb from './breadcrumb';
 
-const { element, sidebar, nav } = window['site_meta'];
+import { main_id, sidebar, nav, components } from '../site.json';
 
 const Layout = () => <>
   <Header nav={ nav }/>
@@ -21,7 +21,7 @@ const Layout = () => <>
       <Breadcrumb />
       <div class="container-fluid" >
         <div class="card">
-          <div className="card-body" id={element}></div>
+          <div className="card-body" id={main_id}></div>
         </div>
       </div>
     </main>
@@ -42,5 +42,6 @@ export default {
     'https://unpkg.com/@coreui/coreui@2/dist/js/coreui.min.js'
   ],
   body_class: ['app', 'header-fixed', 'sidebar-fixed', 'aside-menu-fixed', 'sidebar-lg-show'],
+  components,
   Layout
 }

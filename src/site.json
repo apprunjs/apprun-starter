@@ -1,7 +1,7 @@
 {
   "title": "My AppRun Site",
-  "layout": "tailwind/layout",
-  "element": "my-app",
+  "main_id": "my-app",
+  "layout": "bootstrap5",
   "nav": [
     {
       "text": "Home",
@@ -30,18 +30,21 @@
       "link": "#About"
     }
   ],
-  "routes": [
+  "components": [
     {
       "path": "#",
-      "component": "Home"
+      "component": "Home",
+      "element": "my-app"
     },
     {
       "path": "#Contact",
-      "component": "Contact"
+      "component": "Contact",
+      "element": "my-app"
     },
     {
       "path": "#About",
-      "component": "About"
+      "component": "About",
+      "element": "my-app"
     }
   ]
 }
