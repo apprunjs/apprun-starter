@@ -29,7 +29,7 @@ export const add_js = (url, type = null) => new Promise((resolve, reject) => {
 const add_component = ({ path, component, element }) => {
   app.once(path, async () => {
     const module = await import(`./${component}.js`);
-    new module.default().start(element);
+    new module.default().mount(element);
   });
 };
 
@@ -51,4 +51,6 @@ export const load_layout = app['load_layout'] = async (layout = window['layout']
   import(`./${layout}.js`).then(async module => render_layout(module.default || {}));
 };
 
-
+export const load_apprun_dev_tools = () => {
+  add_js('https://unpkg.com/apprun/dist/apprun-dev-tools.js');
+}
