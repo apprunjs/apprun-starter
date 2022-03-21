@@ -25,3 +25,6 @@ sidebar:
 dev-tools:
   apprun: true
   port: 8080
+
+static-pages:
+- /home
