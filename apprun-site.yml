@@ -1,0 +1,27 @@
+site_name: AppRun Site
+site_url: /
+copyright: Copyright &copy; 2022
+
+theme:
+  name: src/tailwind/layout
+  main_element: my-app
+
+nav:
+- text: Home
+  link: "/"
+- text: Contact
+  link: "/contact"
+- text: About
+  link: "/about"
+
+sidebar:
+- text: Home
+  link: "/"
+- text: Contact
+  link: "/contact"
+- text: About
+  link: "/about"
+
+dev-tools:
+  apprun: true
+  port: 8080

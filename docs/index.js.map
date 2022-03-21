@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/apprun.ts", "../src/Home.tsx", "../pages/index.tsx"],
+  "sourcesContent": ["const app = window['app'];\nconst Component = window['Component'];\nexport default app;\nexport { app, Component };\n", "import { app, Component } from './apprun';\nexport default class HomeComponent extends Component {\n  state = 'Home';\n\n  view = state => <div>\n    <h1>{state}</h1>\n  </div>;\n\n  update = {\n    '#, #Home': state => state,\n  };\n}\n\nexport const Home = () => <HomeComponent/>;\n\n", "import Home from '../src/Home';\nexport default Home;\n"],
+  "mappings": "AAAA,GAAM,GAAM,OAAO,IACb,EAAY,OAAO,UCAzB,mBAA2C,EAAU,CACnD,MAAQ,OAER,KAAO,GAAS,IAAC,WACf,IAAC,UAAI,CAAM,CACb,EAEA,OAAS,CACP,WAAY,GAAS,CACvB,CACF,ECVA,GAAO,GAAQ",
+  "names": []
+}

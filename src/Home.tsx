@@ -1,5 +1,4 @@
 import { app, Component } from './apprun';
-
 export default class HomeComponent extends Component {
   state = 'Home';
 
@@ -11,4 +10,6 @@ export default class HomeComponent extends Component {
     '#, #Home': state => state,
   };
 }
+
+export const Home = () => <HomeComponent/>;
 

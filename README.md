@@ -1,10 +1,10 @@
 ## My AppRun App
 
+Add pages to the directory `pages`; they will be served as static files.
 
-Modify src/site.json to configure your app.
+Modify apprun-site.yml to configure your app.
 
-* Use _npm start_ to start the dev server
-* Use _npm test_ to run unit tests
+* Use _npm run dev_ to start the dev server
 * Use _npm run build_ to build for production
 
-This is an application built with [AppRun](https://github.com/yysun/apprun).
+This is an application built with [AppRun Site](https://github.com/yysun/apprun-site).
