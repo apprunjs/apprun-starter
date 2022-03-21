@@ -1,0 +1,2 @@
+var a=window.app,o=window.Component;var t=class extends o{constructor(){super(...arguments);this.state={title:"Products",query:["1","2","3"]};this.view=e=>React.createElement("div",null,React.createElement("h1",null,e.title),React.createElement("ul",null,e.query.map(p=>React.createElement("li",{key:p},React.createElement("a",{class:"nav-link",href:`/products/${p}`},p),e.id===p&&React.createElement("span",{class:"ml-3 fa fa-check"})))));this.update={"/products":(e,p)=>({...e,id:p})}}};export{t as default};
+//# sourceMappingURL=index.js.map

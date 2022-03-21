@@ -33,8 +33,9 @@ const add_component = (component, main_element) => {
   const [path, file] = component;
   app.once(path, async () => {
     const module = await import(`${ file }`);
-    new module.default().mount(main_element, { route: path });
-    app.route(path);
+    const component = new module.default();
+    component.mount(main_element, { route: path });
+    app.route(location.pathname);
   });
 };
 
@@ -43,11 +44,17 @@ const add_components = (components, main_element) => {
 };
 
 const render_layout = async ({ Layout, styles = null, scripts = null, body_class = null }) => {
-  if (styles) for (let i = 0; i < styles.length; i++) await add_css(styles[i]);
+  if (document.head.parentElement.dataset.static == null) {
+    if (styles) for (let i = 0; i < styles.length; i++) await add_css(styles[i]);
+    document.head.parentElement.dataset.static = "true";
+  }
   if (scripts) for (let i = 0; i < scripts.length; i++) await add_js(scripts[i]);
   body_class && document.body.classList.add(...body_class);
   Layout && app.render(document.body, <Layout />);
   app.route(location.pathname);
+};
+
+app.on('//', () => {
   const menus = document.querySelectorAll('a[href*="/"]');
   for (let i = 0; i < menus.length; i++) {
     const menu = menus[i] as HTMLAnchorElement;
@@ -57,14 +64,15 @@ const render_layout = async ({ Layout, styles = null, scripts = null, body_class
       app.route(menu.pathname);
     }
   }
-};
+});
 
 const load_apprun_dev_tools = () => {
   add_js('https://unpkg.com/apprun/dist/apprun-dev-tools.js');
 }
 
-    window['config'] = {"site_name":"AppRun Site","site_url":"/","copyright":"Copyright &copy; 2022","theme":{"name":"src/tailwind/layout","main_element":"my-app"},"nav":[{"text":"Home","link":"/"},{"text":"Contact","link":"/contact"},{"text":"About","link":"/about"}],"sidebar":[{"text":"Home","link":"/"},{"text":"Contact","link":"/contact"},{"text":"About","link":"/about"}],"dev-tools":{"apprun":true,"port":8080}};
-    const components = [["/","/index.js"],["/about","/about/index.js"],["/contact","/contact/index.js"]];
+
+    window['config'] = {"site_name":"AppRun Site","site_url":"https://apprunjs.github.io/apprun-starter/","copyright":"Copyright &copy; 2022","theme":{"name":"src/tailwind/layout","main_element":"my-app"},"nav":[{"text":"Home","link":"/"},{"text":"Contact","link":"/contact"},{"text":"About","link":"/about"}],"sidebar":[{"text":"Home","link":"/"},{"text":"Contact","link":"/contact"},{"text":"About","link":"/about"}]};
+    const components = [["/","/index.js"],["/products","/products/index.js"],["/about","/about/index.js"],["/contact","/contact/index.js"]];
 
     import layout from '../src/tailwind/layout';
     add_components(components, 'my-app');

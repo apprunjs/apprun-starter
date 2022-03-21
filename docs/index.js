@@ -1,2 +1,2 @@
-var t=window.app,n=window.Component;var o=class extends n{state="Home";view=e=>t.h("div",null,t.h("h1",null,e));update={"#, #Home":e=>e}};var s=o;export{s as default};
+var o=window.app,e=window.Component;var t=class extends e{state="Home";view=n=>o.h("div",null,o.h("h1",null,n),o.h("p",null,"This is an AppRun component."))};var s=t;export{s as default};
 //# sourceMappingURL=index.js.map

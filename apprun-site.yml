@@ -1,5 +1,6 @@
 site_name: AppRun Site
-site_url: /
+site_url: https://apprunjs.github.io/apprun-starter/
+# site_url: /
 copyright: Copyright &copy; 2022
 
 theme:
