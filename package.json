@@ -1,11 +1,11 @@
 {
-  "name": "t",
+  "name": "apprun-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "apprun-dev-server --entry-file=index.html docs",
+    "start": "apprun-dev-server --entry-file=404.html docs",
     "dev": "run-p start dev:*",
     "build": "run-s build:*",
     "build:pages": "NODE_ENV=production apprun-site build -o docs",
@@ -20,7 +20,7 @@
   "devDependencies": {
     "apprun": "^3.28.10",
     "apprun-dev-server": "^1.3.4",
-    "apprun-site": "^1.0.3",
+    "apprun-site": "^1.0.4",
     "autoprefix": "^1.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",

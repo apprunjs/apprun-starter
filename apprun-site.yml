@@ -1,31 +1,18 @@
 site_name: AppRun Site
 site_url: https://apprunjs.github.io/apprun-starter/
 # site_url: /
-copyright: Copyright &copy; 2022
 
-theme:
-  name: src/tailwind/layout
-  main_element: my-app
+layout: src/tailwind/layout
 
-nav:
-- text: Home
-  link: "/"
-- text: Contact
-  link: "/contact"
-- text: About
-  link: "/about"
+plugins:
+  - my-plugin.js
 
-sidebar:
-- text: Home
-  link: "/"
-- text: Contact
-  link: "/contact"
-- text: About
-  link: "/about"
+apprun-dev-tools: true
 
-dev-tools:
-  apprun: true
+dev-server:
   port: 8080
 
 static-pages:
-- /home
+  - /products/1
+  - /products/2
+  - /products/3
