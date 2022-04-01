@@ -1,8 +1,6 @@
 site_name: AppRun Site
-site_url: https://apprunjs.github.io/apprun-starter/
-# site_url: /
-
-layout: src/tailwind/layout
+# site_url: https://apprunjs.github.io/apprun-starter/
+site_url: /
 
 plugins:
   - my-plugin.js

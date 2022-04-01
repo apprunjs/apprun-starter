@@ -1,4 +1,11 @@
-var e=window.Component,n=class extends e{constructor(){super(...arguments);this.view=()=>`_html:
+// docs/about/index.tsx
+var Component = window["Component"];
+var about_default = class extends Component {
+  view = () => `_html:
 <h1>About</h1>
-<p>This is an HTML page</p>`}};export{n as default};
+<p>This is an HTML page</p>`;
+};
+export {
+  about_default as default
+};
 //# sourceMappingURL=index.js.map

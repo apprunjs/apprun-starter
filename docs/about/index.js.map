@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["index.tsx"],
   "sourcesContent": ["const Component = window['Component'];\n  export default class extends Component {\n    // {\"title\":\"About\",\"content\":\"\\n<h1>About</h1>\\n<p>This is an HTML page</p>\"}\n    view = () => `_html:\n<h1>About</h1>\n<p>This is an HTML page</p>`\n  }"],
-  "mappings": "AAAA,GAAM,GAAY,OAAO,UACvB,eAA6B,EAAU,CAAvC,kCAEE,UAAO,IAAM;AAAA;AAAA,6BAGf",
+  "mappings": ";AAAA,IAAM,YAAY,OAAO;AACvB,kCAA6B,UAAU;AAAA,EAErC,OAAO,MAAM;AAAA;AAAA;AAGf;",
   "names": []
 }

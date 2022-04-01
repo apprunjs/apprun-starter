@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["index.tsx"],
   "sourcesContent": ["const Component = window['Component'];\n  export default class extends Component {\n    // {\"title\":\"Contact\",\"content\":\"\\n<h1 id=\\\"contact\\\" tabindex=\\\"-1\\\">Contact</h1>\\n<p>This is a markdown page.</p>\\n\"}\n    view = () => `_html:\n<h1 id=\"contact\" tabindex=\"-1\">Contact</h1>\n<p>This is a markdown page.</p>\n`\n  }"],
-  "mappings": "AAAA,GAAM,GAAY,OAAO,UACvB,eAA6B,EAAU,CAAvC,kCAEE,UAAO,IAAM;AAAA;AAAA;AAAA,EAIf",
+  "mappings": ";AAAA,IAAM,YAAY,OAAO;AACvB,oCAA6B,UAAU;AAAA,EAErC,OAAO,MAAM;AAAA;AAAA;AAAA;AAIf;",
   "names": []
 }
