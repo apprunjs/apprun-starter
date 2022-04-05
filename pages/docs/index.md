@@ -6,22 +6,22 @@ To create a new AppRun Site:
   npm install
   ```
 
-Add pages to the directory `pages`; they can be HTML files, markdown files, and tsx/jsx files (AppRun components).
+An AppRun-Site project has the following structure:
 
-Run the server:
-
-```bash
-npm run start
+```
+/public             <- static website
+/pages              <- pages of the website
+  /index.html       <- index page
+  /index.md         <- home page
+  /main.tsx         <- start up code (registers web component and renders the layout)
+/components         <- optional
+/api                <- optional
 ```
 
-Build for production:
+You can ddd pages to the directory `pages`; they can be HTML files, markdown files, and tsx/jsx files (AppRun components).
 
-```bash
-npm run build
-```
+Then, you can use:
 
-Pre-render pages:
-
-```bash
-npm run prerender
-```
+* _npm start_ to start the dev server
+* _npm run build_ to build for production
+* _npm run render_ to build a static website

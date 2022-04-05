@@ -10,14 +10,14 @@
     "start:server": "apprun-site serv",
     "start:watch": "nodemon --watch pages --exec \"apprun-site build\" -e \"ts tsx css html md\" --delay 2.5",
     "build": "apprun-site build -c",
-    "prerender": "apprun-site build --render"
+    "render": "apprun-site build --render"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "apprun": "^3.28.13",
-    "apprun-site": "^1.0.10",
+    "apprun-site": "^1.0.11",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5"
   }

@@ -1,11 +1,4 @@
-
-[AppRun-Site](https://github.com/yysun/apprun-site) is a command-line tool for building modern web applications with [AppRun](https://github.com/yysun/apprun).  It consists of three features:
-
-* A build command compiles your code to ES Modules with [esbuild](https://esbuild.github.io/) and creates a static web site.
-* A development server that supports your code run as Single Page Applications (SPA) and supports Server-Side Rendering (SSR).
-* A command to pre-render your SPA and SSR pages to static HTML files.
-
-This site is built with apprun-site. It has the following structure:
+This site is built with [AppRun-Site](https://github.com/yysun/apprun-site), a command-line tool for building modern web applications with [AppRun](https://github.com/yysun/apprun). It has the following structure:
 
 ```
 /api
@@ -31,10 +24,10 @@ The source code is in the _api_, _components_, and _pages_ directories. Start th
 npm start
 ```
 
-To generate a pre-renderd static web site, run the prerender command. The static web site is created in the _public_ directory.
+To generate a static web site, run the _npm run render_ command. The static web site is created in the _public_ directory.
 
 ```bash
-npm run prerender
+npm run render
 ```
 
 Have fun!
