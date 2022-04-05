@@ -1,9 +1,8 @@
 import app from 'apprun';
-import Layout from './_src/layout'
+import Layout from '../components/layout'
+import Comic from '../components/comic';
 
 export default () => {
-
-  window['app-element'] = 'my-app';
+  app.webComponent('ws-comic', Comic);
   app.render(document.body, <Layout />);
-
 }

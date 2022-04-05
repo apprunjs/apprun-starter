@@ -2,12 +2,9 @@
 
 *AppRun-Site* is a command-line tool for building modern web applications with [AppRun](https://github.com/yysun/apprun).  It consists of three features:
 
-* A build command compiles your code to ES Modules with [esbuild](https://esbuild.github.io/)
-
+* A build command compiles your code to ES Modules with [esbuild](https://esbuild.github.io/) and creates a static web site.
 * A development server that supports your code run as Single Page Applications(SPA) and supports Server-Side Rendering (SSR).
-
 * A command to pre-render your SPA and SSR pages to static HTML files.
-
 
 ## Installation
 

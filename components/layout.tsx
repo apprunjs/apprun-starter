@@ -7,27 +7,29 @@ const nav = [
     "link": "/"
   },
   {
-    "text": "Contact",
-    "link": "/contact"
+    "text": "Docs",
+    "link": "/docs"
   },
   {
-    "text": "About",
+    "text": "Web Components",
     "link": "/about"
   },
   {
-    "text": "Products",
+    "text": "REST API",
     "link": "/products"
   }
 ];
 
 export default () => {
 
+  window['app-element'] = 'my-app';
+
   return <>
     <div class="d-flex vh-100">
       <main class="flex-grow-1">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="#">My Site</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,7 +46,8 @@ export default () => {
             </div>
           </div>
         </nav>
-        <div class="container p-4 pt-3" id={main_element}>
+        <div class="container">
+          <div id={main_element}></div>
         </div>
       </main>
     </div>
