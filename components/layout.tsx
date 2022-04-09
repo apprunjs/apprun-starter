@@ -11,6 +11,10 @@ const nav = [
     "link": "/docs"
   },
   {
+    "text": "Contact",
+    "link": "/contact"
+  },
+  {
     "text": "Web Components",
     "link": "/about"
   },
