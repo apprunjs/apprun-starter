@@ -4,7 +4,7 @@ Quick Start
 
 ## Create a Site
 
-To create a new AppRun Site, run the following command in terminal:
+To create a new AppRun Site, run the following command in the terminal:
 
 ```sh
 npm init apprun-app [my-app]

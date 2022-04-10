@@ -15,16 +15,19 @@ This site is built with [AppRun-Site](https://github.com/yysun/apprun-site), a c
     /index.md         <- about page (demo of web component)
   /products
     /index.tsx        <- products page (demo of API call)
-/public
 ```
 
-The source code is in the _api_, _components_, and _pages_ directories. Start the dev server to see the site from [http://localhost:8080](http://localhost:8080) as an Single Page App.
+The source code is in the `api`, `components`, and `pages` directories. Start the dev server to see the site from [http://localhost:8080](http://localhost:8080) as a Single Page App.
 
 ```bash
 npm start
 ```
+or
+```bash
+npm run dev
+```
 
-To generate a static web site, run the _npm run render_ command. The static web site is created in the _public_ directory.
+To generate a static website, run the _npm run render_ command. The static website is in the `public` directory.
 
 ```bash
 npm run render
